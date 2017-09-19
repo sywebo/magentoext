@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sywebo_Ajaxcart>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Sywebo_Ajaxcart>
+    </modules>
+</config>

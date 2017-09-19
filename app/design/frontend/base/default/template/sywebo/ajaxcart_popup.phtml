@@ -1,0 +1,74 @@
+<?php
+/** @var Sywebo_Ajaxcart_Block_Popup $this */
+?>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="close-modal btn-remove" data-dismiss="modal"></div>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-buttons">
+                    <a class="button left orange-btn" href="#" data-dismiss="modal"><span><?php echo $this->getContinueShoppingMessage();?></span></a>
+                    <a class="button right" href='<?php echo $this->getCheckoutUrl();?>'><span><?php echo $this->getCheckoutMessage();?></span></a>
+                </div>
+                <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" >
+
+jQuery(document).ready(function(){
+
+    var ControllerName = '<?php echo $this->getRequest()->getControllerName(); ?>';
+    var ActionName = '<?php echo $this->getRequest()->getActionName(); ?>';
+
+    var SyweboPopup = {
+        controllerName: '',
+        actionName: '',
+        page: '',
+        message: '',
+        init: function (controllerName, actionName) {
+            SyweboPopup.controllerName = controllerName;
+            SyweboPopup.actionName = actionName;
+            SyweboPopup.page = SyweboPopup.controllerName + '_' +  SyweboPopup.actionName;
+            jQuery('button.btn-cart').attr('data-toggle', "modal");
+            jQuery('button.btn-cart').attr('data-target', "#myModal");
+            jQuery('button.btn-cart').each(function(){
+                jQuery(this).attr('data-href', jQuery(this).attr('onclick'));
+//                jQuery(this).removeAttr('onclick');
+            })
+            this.bindEvents();
+        },
+        bindEvents: function() {
+            jQuery('button.btn-cart').on('click', function (event) {
+                event.preventDefault();
+//                jQuery.ajax()
+
+                switch (SyweboPopup.page){
+                    case 'product_view':
+                        SyweboPopup.message = Translator.translate('Product was added to cart');
+                        break;
+                    case 'category_view':
+                        SyweboPopup.message = Translator.translate('Product was added to cart');
+                        break;
+                    default:
+                        SyweboPopup.message = Translator.translate('Product was added to cart');
+                        break;
+                }
+                jQuery('div.modal-body p').html(SyweboPopup.message = Translator.translate('Product was added to cart'));
+            });
+        }
+    };
+    SyweboPopup.init(ControllerName, ActionName);
+
+});
+</script>

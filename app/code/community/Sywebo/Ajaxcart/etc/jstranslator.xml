@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<jstranslator>
+    <porduct-was-added-to-cart translate="message" module="checkout">
+        <message>Product was added to cart</message>
+    </porduct-was-added-to-cart>
+    <porducts-was-added-to-cart translate="message" module="checkout">
+        <message>Products were added to cart</message>
+    </porducts-was-added-to-cart>
+</jstranslator>

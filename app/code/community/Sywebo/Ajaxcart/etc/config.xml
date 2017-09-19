@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sywebo_Ajaxcart>
+            <version>1.0.0</version>
+        </Sywebo_Ajaxcart>
+    </modules>
+    <global>
+        <blocks>
+            <syweboajaxcart>
+                <class>Sywebo_Ajaxcart_Block</class>
+            </syweboajaxcart>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <syweboajaxcart>
+                    <file>syweboajaxcart.xml</file>
+                </syweboajaxcart>
+            </updates>
+        </layout>
+    </frontend>
+</config>

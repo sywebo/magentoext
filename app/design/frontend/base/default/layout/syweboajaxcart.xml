@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/sywebo/bootstrap-modal.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/sywebo/popup.js</name>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/sywebo_modal.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="syweboajaxcart/popup"  name="syweboajaxcartpopup" template="sywebo/ajaxcart_popup.phtml"/>
+        </reference>
+    </default>
+</layout>
