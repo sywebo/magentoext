@@ -1,0 +1,29 @@
+<config>
+    <tabs>
+        <syweboconfig translate="label" module="syweboajaxcart">
+            <label>Sywebo</label>
+            <sort_order>99999</sort_order>
+        </syweboconfig>
+    </tabs>
+    <sections>
+        <ajax_cart translate="label" module="syweboajaxcart">
+            <label>Ajaxcart</label>
+            <tab>syweboconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <sywebo_ajax_cart_config translate="label">
+                    <label>Ajaxcart Config</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </sywebo_ajax_cart_config>
+            </groups>
+        </ajax_cart>
+    </sections>
+</config>

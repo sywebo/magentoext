@@ -44,14 +44,25 @@ jQuery(document).ready(function(){
             jQuery('button.btn-cart').attr('data-target', "#myModal");
             jQuery('button.btn-cart').each(function(){
                 jQuery(this).attr('data-href', jQuery(this).attr('onclick'));
-//                jQuery(this).removeAttr('onclick');
+                jQuery(this).removeAttr('onclick');
             })
             this.bindEvents();
         },
         bindEvents: function() {
             jQuery('button.btn-cart').on('click', function (event) {
                 event.preventDefault();
-//                jQuery.ajax()
+                var ajaxLocationUrl = jQuery(this).attr('data-href').replace('setLocation(\'', '').replace('\')','');
+                jQuery.ajax({
+                    url: ajaxLocationUrl,
+                    method: "POST",
+                }).done(function (data) {
+                    jQuery.ajax({
+                        url: ajaxLocationUrl,
+                        method: "POST",
+                    }).done(function (data) {
+
+                    });
+                });
 
                 switch (SyweboPopup.page){
                     case 'product_view':

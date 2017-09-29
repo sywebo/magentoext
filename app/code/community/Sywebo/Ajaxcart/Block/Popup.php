@@ -21,4 +21,9 @@ class Sywebo_Ajaxcart_Block_Popup extends Mage_Checkout_Block_Cart
        return Mage::helper('checkout')->__("Product");
    }
 
+   public function getAjaxUpdateBlocks()
+   {
+
+   }
+
 }

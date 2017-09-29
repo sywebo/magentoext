@@ -11,6 +11,11 @@
                 <class>Sywebo_Ajaxcart_Block</class>
             </syweboajaxcart>
         </blocks>
+        <helpers>
+            <syweboajaxcart>
+                <class>Sywebo_Ajaxcart_Helper</class>
+            </syweboajaxcart>
+        </helpers>
     </global>
     <frontend>
         <layout>
@@ -21,4 +26,25 @@
             </updates>
         </layout>
     </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <ajax_cart>
+                                            <title>Sywebo ajaxcart section</title>
+                                        </ajax_cart>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
 </config>
